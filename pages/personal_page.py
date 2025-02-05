@@ -14,6 +14,7 @@ class PersonalPage(BasePage):
     SAVE_BUTTON = ("xpath", "(//button[@type='submit'])[1]")
     SPINNER = ("xpath", "//div[@class='oxd-loading-spinner']")
 
+
     def change_name(self, new_name):
         with allure.step(f"Change name on '{new_name}'"):
             first_name_field = self.wait.until(EC.element_to_be_clickable(self.FIRST_NAME_FIELD))

@@ -14,9 +14,10 @@ class BaseTest:
 
     @pytest.fixture(autouse=True)
     def setup(self, request, driver):
-        print(f"Start to fixture setup in BaseTest")
+        print(f"\n===>\tStart to fixture setup in BaseTest")
         request.cls.data = Data()
         request.cls.driver = driver
         request.cls.login_page = LoginPage(driver)
         request.cls.dashboard_page = DashboardPage(driver)
         request.cls.personal_page = PersonalPage(driver)
+        print(f"\n===>\tEnd to fixture setup in BaseTest")

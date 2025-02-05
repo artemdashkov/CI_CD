@@ -10,7 +10,7 @@ class TestProfileFeature(BaseTest):
     @allure.severity("Critical")
     @pytest.mark.smoke
     def test_change_profile_name(self):
-        print(f"Start to 'test_change_profile_name' in 'feature_profile_test'")
+        print(f"\n===>\tStart to 'test_change_profile_name' in 'feature_profile_test'")
         self.login_page.open()
         self.login_page.enter_login(self.data.LOGIN)
         self.login_page.enter_password(self.data.PASSWORD)
