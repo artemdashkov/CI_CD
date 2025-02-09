@@ -18,12 +18,8 @@ class PersonalPage(BasePage):
     def change_name(self, new_name):
         with allure.step(f"Change name on '{new_name}'"):
             first_name_field = self.wait.until(EC.element_to_be_clickable(self.FIRST_NAME_FIELD))
-
-            time.sleep(4)
-            first_name_field.send_keys(Keys.CONTROL + "A")
+            first_name_field.send_keys(Keys.COMMAND + "A")
             first_name_field.send_keys(Keys.BACKSPACE)
-            time.sleep(4)
-
             first_name_field.send_keys(new_name)
             self.name = new_name
 
